@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+    backend:
+        build: ./backend
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - ./backend/:/usr/src/backend/
+
+        expose:
+            - 8000
+
+    frontend:
+         bluid: ./frontend
+         command: npm start
+         volumes:
+            - ./frontend/:/usr/src/frontend/
+         ports:
+            - 3000:3000
