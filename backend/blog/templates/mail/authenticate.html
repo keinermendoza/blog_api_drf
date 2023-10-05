@@ -1,15 +1,15 @@
 {% extends "mail/base.html" %}
 
+
 {% block title %}
-    Wellcome to {{website}}
+    Authentication step
 {% endblock title %}
 
 {% block content %}
-    <h1>Wellcome {{username}} to the {{website}}</h1>
+    <h1>Hello {{username}}, follow the next link to authenticate your account on {{website}}</h1>
     <p>I hope you like my website</p>
 
-    <a href="{{url}}">We wait for you here</a>
+    <a href="{{url}}">Follow this link for authenticate</a>
     
     <p>mail send on {{date}}</p>
-
 {% endblock content %}
